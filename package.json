@@ -4,6 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "supervisor node --use_strict app.js",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p",
     "test": "mocha --harmony"
   },
   "dependencies": {
