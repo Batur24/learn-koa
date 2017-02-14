@@ -2,7 +2,8 @@
  * Created by batur on 2017/1/29.
  */
 const Sequelize = require('sequelize');
-const sequelize = require('../config/db-config');
+//const sequelize = require('../config/db-config');
+const sequelize = require('./base');
 
 var User = sequelize.define('fun', {
   id: {
