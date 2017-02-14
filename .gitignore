@@ -4,3 +4,6 @@ node_modules/*
 .jshintrc
 .editorconfig
 npm-debug.log*
+*\.map
+*compiled\.js
+scripts/*

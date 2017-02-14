@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "supervisor node --use_strict app.js",
+    "start": "supervisor -w . node start.js",
     "test": "mocha --harmony"
   },
   "dependencies": {
@@ -14,8 +14,9 @@
     "babel-preset-stage-3": "^6.22.0",
     "babel-register": "^6.22.0",
     "koa": "^2.0.0",
+    "koa-logger": "^2.0.1",
     "koa-nunjucks-2": "^3.0.0-alpha.5",
-    "koa-router": "^7.1.0",
+    "koa-router": "^7.0.1",
     "koa-static": "^2.0.0",
     "mysql": "^2.13.0",
     "nunjucks": "^3.0.0",
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
     "koa-logger": "^1.3.1",
     "mocha": "^1.18.2",
     "should": "3.3.2",

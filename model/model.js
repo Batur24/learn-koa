@@ -2,18 +2,18 @@
  * Created by batur on 2017/1/29.
  */
 const Sequelize = require('sequelize');
-const sequelize = require('../app');
+const sequelize = require('../config/db-config');
 
-var User = sequelize.define('user', {
+var User = sequelize.define('fun', {
   id: {
-    type: Sequelize.STRING(50),
+    type: Sequelize.INTEGER,
     primaryKey: true
   },
-  name: Sequelize.STRING(100)
+  name: Sequelize.STRING(100),
+  passowrd: Sequelize.STRING(20)
 },
-  {
-    timestamps: true
-  });
+  {timestamps: false}
+  );
 module.exports = User;
 
 
