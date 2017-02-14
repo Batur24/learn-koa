@@ -4,11 +4,13 @@
 const router = require('koa-router')();
 const index = require('./controller/index');
 
-router.get('/', index.home);
-router.get('/test/', index.test);
+function routes(app) {
+  router.get('/', index.home);
+  router.get('/test/', index.test);
 
-
-module.exports={
-  url: router
+  app.use(router.middleware());
 }
+
+
+module.exports = routes;
 

@@ -20,13 +20,10 @@ app.use(koaNunjucks({
 app.use(logger());
 
 //urls setting
-app.use(appRouter.url.routes(), appRouter.url.allowedMethods());
+appRouter(app);
 
 //static file setting, should behind the urls setting
 app.use(serve(__dirname + '/public'));
-
-//database setting
-
 
 app.listen(3000, function(){
     console.log('server running...')
